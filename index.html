@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page">
+        <header>
+            <h1>Guestbook</h1>
+            <P>☆☾❄☃♧</P>
+            <button id="writeBtn">Write a Message</button>
+        </header>
+        <main>
+            <div id="container"></div>
+        </main>
+    </div>
+
+    <div id="modal" style="display:none">
+        <div id="writeGuestBook">
+            <button id="closeModal">▹back</button>
+            
+            <form id="guestbookForm">
+                <p>Name</p>
+                <input type="text" name="author" required>
+                <p>Title</p>
+                <input type="text" name="title" required>
+                <p>Message</p>
+                <textarea name="content" required></textarea>
+                <p>Password</p>
+                <input type="password" name="password" pattern="^\d{4}$" required title="숫자 4자리 비밀번호 입력">
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteModal" style="display: none">
+        <div id="deleteBox">
+            <h2>Delete a Message</h2>
+            <p>Password</p>
+            <input type="password" id="deletePassword">
+            <div class="deleteButtons">
+                <button id="cancel">Cancel</button>
+                <button id="confirm">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
